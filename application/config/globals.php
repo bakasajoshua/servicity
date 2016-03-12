@@ -1,0 +1,3 @@
+<?php
+	/* Local site configurations */
+?>

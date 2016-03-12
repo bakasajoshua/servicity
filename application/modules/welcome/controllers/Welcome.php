@@ -20,20 +20,8 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
+		// echo "This is the welcome page for you.";die();
 		$this->load->view('welcome_message');
 	}
 
-	public function validate_email($email)
-	{
-		// Remove all illegal characters from email
-		$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
-		// Validate e-mail
-		if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-			$text = $email." is a valid email address";
-		} else {
-			$text = $email." is not a valid email address";
-		}
-		echo json_encode($text);
-	}
 }
